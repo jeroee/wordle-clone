@@ -7,6 +7,7 @@ body {
     background-color: #1B2430;
     min-width: 420px;
     position: relative;
+    min-height: 900px;
 }
 
 .alignment {
@@ -77,6 +78,7 @@ body {
     cursor: pointer;
     text-transform: uppercase;
     background-color: #6e96be;
+    min-width: 35px;
 }
 
 .alert {
