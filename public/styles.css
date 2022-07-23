@@ -6,7 +6,8 @@ body {
 
 body {
     background-color: #1B2430;
-    min-width: 420px;
+    /* min-width: 420px; */
+    width: 100%;
     position: relative;
     height: 100%;
 }
