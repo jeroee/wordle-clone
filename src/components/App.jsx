@@ -20,7 +20,7 @@ function App() {
         <div className="base-page">
             <div className="top">
                 <h1>Wordle Clone 🙃 </h1>
-                <p>by Jeremy </p>
+                <p>by Jeremy</p>
             </div>
             <WordBoard className="alignment"
                 correct_word={word}
