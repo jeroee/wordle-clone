@@ -19,7 +19,7 @@ function App() {
     return (
         <div className="base-page">
             <div className="top">
-                <h2>Wordle Clone 🙃 </h2>
+                <h3>Wordle Clone 🙃 </h3>
                 <p>by Jeremy</p>
             </div>
             <WordBoard className="alignment"
