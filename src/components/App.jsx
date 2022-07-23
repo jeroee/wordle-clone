@@ -14,8 +14,6 @@ function App() {
     useEffect(() => {
         const word = generateWord(WORD_LENGTH);
         setWord(word);
-        // setWord('bells')
-        console.log(`target word is ${word}`)
     }, []);
 
     return (
@@ -25,7 +23,7 @@ function App() {
                 <p>by Jeremy</p>
             </div>
             <WordBoard className="alignment"
-                correct_word={'bells'}
+                correct_word={word}
                 tries={NUMBER_TRIES}
                 word_length={WORD_LENGTH}
             />

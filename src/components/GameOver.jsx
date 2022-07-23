@@ -8,8 +8,7 @@ function Gameover(props) {
             <Alert variant="dark">
                 <Alert.Heading>Game Over 😥</Alert.Heading>
                 <p>
-                    The correct word is <b>'{props.targetWord.join('')}'</b>.
-                    Better luck next time ...
+                    The correct word is <b>'{props.targetWord.join('')}'</b>. Better luck next time...
                 </p>
                 <Button onClick={props.restart}>Restart Game</Button>
             </Alert>

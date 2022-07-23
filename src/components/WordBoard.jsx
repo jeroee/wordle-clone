@@ -101,20 +101,23 @@ function WordBoard(props) {
                         pos.push(i)
                     }
                 }
-                console.log(pos)
                 // if letter exists but not in correct position
                 for (const i of pos) {
                     if (currentWord[i] !== targetWord[i] &&
                         targetWord.some(letter => letter === currentWord[i]) &&
                         letterCounter[currentWord[i]] >= 1) {
                         CorrectLetterWrongPos(i)
+                        letterCounter[currentWord[i]] -= 1;
                     }
                     // if letter do not exists at all
                     else {
                         WrongLetter(i)
-                        while (!wrongLetters.includes(currentWord[i])) {
-                            wrongLetters.push(currentWord[i])
+                        if (!targetWord.some(letter => letter === currentWord[i])) {
+                            while (!wrongLetters.includes(currentWord[i])) {
+                                wrongLetters.push(currentWord[i])
+                            }
                         }
+                        letterCounter[currentWord[i]] -= 1;
                     }
                 }
 

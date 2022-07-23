@@ -8,7 +8,7 @@ function Correct(props) {
             <Alert variant="light">
                 <Alert.Heading>Hooray! 🥳</Alert.Heading>
                 <p>
-                    Good job for guessing the correct word <b>"{props.targetWord}"</b>.
+                    Good job for guessing the correct word <b>"{props.targetWord.join('')}"</b>.
                     Well Done. 😺
                 </p>
                 <Button onClick={props.restart}>Restart Game</Button>
