@@ -187,7 +187,7 @@ function WordBoard(props) {
                 <strong>Word does not exist!</strong>
             </div>
             <Gameover restart={RestartGame} targetWord={targetWord} show={hideGameOver} />
-            <Correct restart={RestartGame} tries={attemptedWords.length} show={hideComplete} />
+            <Correct restart={RestartGame} targetWord={targetWord} show={hideComplete} />
             <div className="container">
                 {attempts.map((attempt, index) => {
                     return (
