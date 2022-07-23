@@ -16,9 +16,9 @@ body {
 .top {
     color: aliceblue;
     text-align: center;
-    margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 10px;
 }
+
 
 .card {
     border: 2px solid gray;
@@ -58,7 +58,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 #keyboard-cont div {

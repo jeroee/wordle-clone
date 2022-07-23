@@ -182,7 +182,7 @@ function WordBoard(props) {
     }
 
     return (
-        <div>
+        <div className="wordboard">
             <div style={{ visibility: `${hidePing}` }} className="alert alert-warning fade show text-center" role="alert">
                 <strong>Word does not exist!</strong>
             </div>
