@@ -44,7 +44,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .col {
@@ -61,7 +61,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 #keyboard-cont div {
