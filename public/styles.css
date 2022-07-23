@@ -79,6 +79,7 @@ body {
     text-transform: uppercase;
     background-color: #6e96be;
     min-width: 35px;
+    touch-action: manipulation;
 }
 
 .alert {
