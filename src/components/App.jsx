@@ -17,12 +17,12 @@ function App() {
     }, []);
 
     return (
-        <div>
+        <div className="base-page">
             <div className="top">
                 <h1>Wordle Clone 🙃 </h1>
                 <p>by Jeremy </p>
             </div>
-            <WordBoard
+            <WordBoard className="alignment"
                 correct_word={word}
                 tries={NUMBER_TRIES}
                 word_length={WORD_LENGTH}

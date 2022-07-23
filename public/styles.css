@@ -3,9 +3,14 @@ body {
     min-width: 700px;
 }
 
+.alignment {
+    margin: 0 auto;
+}
+
 .top {
     color: aliceblue;
     text-align: center;
+    margin: 0 auto;
     margin-top: 50px;
 }
 
@@ -59,13 +64,13 @@ body {
 }
 
 .keyboard-button {
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 1.5rem;
+    font-weight: 500;
     padding: 0.5rem;
     margin: 0 2px;
     cursor: pointer;
     text-transform: uppercase;
-    background-color: #9CB4CC;
+    background-color: #6e96be;
 }
 
 .alert {
