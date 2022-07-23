@@ -6,7 +6,7 @@ import WordBoard from './WordBoard.jsx';
 function App() {
 
     const WORD_LENGTH = 5;
-    const NUMBER_TRIES = 5;
+    const NUMBER_TRIES = 6;
 
     const [word, setWord] = useState('');
 
