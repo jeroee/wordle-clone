@@ -76,6 +76,16 @@ function WordBoard(props) {
     async function checkWord() {
         const wordToCheck = currentWord.join("");
         const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${wordToCheck}`
+        let letterCounter = {};
+
+        for (const i of targetWord) {
+            if (letterCounter[i] == null) {
+                letterCounter[i] = 1;
+            }
+            else {
+                letterCounter[i] += 1;
+            }
+        }
 
         try {
             // if word exists
@@ -85,9 +95,12 @@ function WordBoard(props) {
                     // if correct letter in correct position
                     if (currentWord[i] === targetWord[i]) {
                         CorrectLetterAndPos(i)
+                        letterCounter[currentWord[i]] -= 1;
                     }
                     // if letter exists but not in correct position
-                    else if (currentWord[i] !== targetWord[i] && targetWord.some(letter => letter === currentWord[i])) {
+                    else if (currentWord[i] !== targetWord[i] &&
+                        targetWord.some(letter => letter === currentWord[i]) &&
+                        letterCounter[currentWord[i]] >= 1) {
                         CorrectLetterWrongPos(i)
                     }
                     // if letter do not exists at all
