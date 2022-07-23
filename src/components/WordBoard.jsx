@@ -86,9 +86,9 @@ function WordBoard(props) {
                 letterCounter[i] += 1;
             }
         }
-
         try {
             // if word exists
+            let pos = [];
             const response = await axios.get(url);
             if (response.status === 200) {
                 for (let i = 0; i < currentWord.length; i++) {
@@ -97,8 +97,14 @@ function WordBoard(props) {
                         CorrectLetterAndPos(i)
                         letterCounter[currentWord[i]] -= 1;
                     }
-                    // if letter exists but not in correct position
-                    else if (currentWord[i] !== targetWord[i] &&
+                    else {
+                        pos.push(i)
+                    }
+                }
+                console.log(pos)
+                // if letter exists but not in correct position
+                for (const i of pos) {
+                    if (currentWord[i] !== targetWord[i] &&
                         targetWord.some(letter => letter === currentWord[i]) &&
                         letterCounter[currentWord[i]] >= 1) {
                         CorrectLetterWrongPos(i)
@@ -111,6 +117,7 @@ function WordBoard(props) {
                         }
                     }
                 }
+
                 // if gotten correct word
                 if (currentWord.toString() === targetWord.toString()) {
                     console.log("congratulations you have gotten the correct word!")

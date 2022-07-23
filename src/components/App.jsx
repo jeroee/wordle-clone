@@ -25,7 +25,7 @@ function App() {
                 <p>by Jeremy</p>
             </div>
             <WordBoard className="alignment"
-                correct_word={'birds'}
+                correct_word={'bells'}
                 tries={NUMBER_TRIES}
                 word_length={WORD_LENGTH}
             />
