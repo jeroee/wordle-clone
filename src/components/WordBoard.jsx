@@ -4,20 +4,17 @@ import axios from 'axios';
 import Gameover from "./GameOver";
 import Correct from "./Correct";
 
-const currentWord = [];
-const attemptedWords = [];
-const targetWord = [];
-const wrongLetters = [];
+const WordBoard = ({ correct_word, word_length, tries }) => {
 
-function WordBoard(props) {
-    let attempts = [...Array(props.tries).keys()];
-    let word_length = props.word_length;
+    const currentWord = [];
+    const attemptedWords = [];
+    const targetWord = [];
+    const wrongLetters = [];
 
+    let attempts = [...Array(tries).keys()];
     if (targetWord.length === 0) {
-        targetWord.push(...Array.from(props.correct_word));
+        targetWord.push(...Array.from(correct_word));
     }
-
-
     useEffect(() => {
         document.addEventListener('keyup', (e) => {
             handleKeyPress(e);

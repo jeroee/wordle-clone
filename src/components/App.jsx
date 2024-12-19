@@ -1,20 +1,26 @@
 import { generateWord } from './RandomWords.js';
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import WordBoard from './WordBoard.jsx';
-
+import SelectionComponent from './Selection.jsx';
+import Button from 'react-bootstrap/Button';
 
 function App() {
 
-    const WORD_LENGTH = 5;
-    const NUMBER_TRIES = 6;
-
     const [word, setWord] = useState('');
+    const [isSelectionMade, setIsSelectionMade] = useState(false);
+    const [wordLength, setWordLength] = useState(6);
+    const [tries, setTries] = useState(5);
 
+    const handleSelection = (selectedSettings) => {
+        setWordLength(selectedSettings.wordLength)
+        setTries(selectedSettings.tries)
+        setWord(generateWord(selectedSettings.wordLength))
+        setIsSelectionMade(true);      // Show the WordBoard
+    };
 
-    useEffect(() => {
-        const word = generateWord(WORD_LENGTH);
-        setWord(word);
-    }, []);
+    const handleBack = () => {
+        setIsSelectionMade(false); // Go back to the SelectionComponent
+    };
 
     return (
         <div className="base-page">
@@ -22,11 +28,25 @@ function App() {
                 <h3>Wordle Clone 🙃 </h3>
                 <p>by Jeremy</p>
             </div>
-            <WordBoard className="alignment"
-                correct_word={word}
-                tries={NUMBER_TRIES}
-                word_length={WORD_LENGTH}
-            />
+            <div>
+                {!isSelectionMade ? (
+                    <SelectionComponent word_length_count={wordLength} tries_count={tries} onSelect={handleSelection} />
+                ) : (
+                    <div>
+                        <div className='back-button-div'>
+                            <Button onClick={handleBack} className='back-button'>
+                                Back
+                            </Button>
+                        </div>
+                        <WordBoard
+                            correct_word={word}
+                            tries={tries}
+                            word_length={wordLength}
+                        />
+                    </div>
+                )}
+            </div>
+
         </div>
 
     );
