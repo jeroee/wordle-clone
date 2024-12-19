@@ -119,7 +119,7 @@ body {
         border: 2px solid gray;
         border-radius: 5px;
         margin: 2px;
-        font-size: 2.5rem;
+        font-size: 1.5rem;
         font-weight: 700;
         height: 2.5rem;
         width: 2.5rem;
@@ -128,7 +128,12 @@ body {
         align-items: center;
         text-transform: uppercase;
         background-color: #1B2430;
-    
+        text-align: center;
+        padding: 0;
+    }
+    .letter{
+        color: white;
+        margin-top: 12px; 
     }
     .selector-card{
         border: 2px solid gray;
