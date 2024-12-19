@@ -104,8 +104,8 @@ body {
 
 .selector-card{
     border: 2px solid gray;
-    height: 18rem;
-    width: 15rem;
+    height: 30rem;
+    width: 35rem;
     display: flex;
     padding: 5px;
     margin: 5px;
@@ -170,4 +170,11 @@ body {
     align-items: center; /* Center vertically */
     justify-content: center;
     left:120px;
+}
+.instructions {
+    justify-items: center;
+    color: white;
+    font-size: 12.5px;
+    text-transform: none;
+    text-align: justify;
 }

@@ -14,6 +14,15 @@ const SelectionComponent = ({ word_length_count, tries_count, onSelect }) => {
         <div className="div-card">
             <Card className="selector-card">
                 <Card.Body>
+                    <div className="instructions">
+                        In this Wordle clone game, your goal is to guess the secret word within a limited number of tries.
+                        Start the game by entering a valid word of the correct length, and after each guess, you'll receive feedback:
+                        🟩 indicates a correct letter in the correct position,
+                        🟨 means a correct letter in the wrong position, and
+                        ⬜ shows that the letter isn't in the word. Use this feedback to refine your guesses and uncover the secret word.
+                        You can choose the word length and the number of attempts at the start of the game.
+                        Win by guessing the word within the allotted tries, or lose and see the correct word revealed. Good luck and have fun!
+                    </div>
                     <div className="subcard">
                         <Card.Text className="card-letter"> select word length:</Card.Text>
                         <CounterComponent className="counter"
@@ -28,7 +37,7 @@ const SelectionComponent = ({ word_length_count, tries_count, onSelect }) => {
                         <CounterComponent
                             value={tries}
                             min={3}
-                            max={7}
+                            max={8}
                             onChange={setTries}
                         />
                     </div>
