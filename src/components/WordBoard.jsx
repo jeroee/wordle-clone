@@ -14,12 +14,12 @@ const WordBoard = ({ correct_word, word_length, tries }) => {
     const targetWord = [...Array.from(correct_word)];
     const attempts = [...Array(tries).keys()];
 
-    console.log("Current State:");
-    console.log("Current Word: ", currentWord);
-    console.log("Attempted Words: ", attemptedWords);
-    console.log("Wrong Letters: ", wrongLetters);
-    console.log("Target Word: ", targetWord);
-    console.log("Attempts: ", attempts);
+    // console.log("Current State:");
+    // console.log("Current Word: ", currentWord);
+    // console.log("Attempted Words: ", attemptedWords);
+    // console.log("Wrong Letters: ", wrongLetters);
+    // console.log("Target Word: ", targetWord);
+    // console.log("Attempts: ", attempts);
 
     const alphabetToCode = {
         A: 65, B: 66, C: 67, D: 68, E: 69, F: 70, G: 71,
