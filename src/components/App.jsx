@@ -20,6 +20,7 @@ function App() {
 
     const handleBack = () => {
         setIsSelectionMade(false); // Go back to the SelectionComponent
+        window.location.reload(false);
     };
 
     return (
