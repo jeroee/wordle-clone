@@ -14,7 +14,7 @@ React (JavaScript, JSX, CSS)
 ## How to Play
 1. Set your preference:
    - Select word length (4-8 letters)
-   - Select number of tries (5,6,7 attempts)
+   - Select number of tries (3-8 attempts)
 2. Start the game
    - Submit your guess to see feedback:
    - Correct letters in the right position are highlighted in green.
@@ -25,8 +25,7 @@ React (JavaScript, JSX, CSS)
    - If you use all attempts without guessing the word, the correct word is revealed.
 
 ## Demo
-https://user-images.githubusercontent.com/56480078/180609437-a637a2ea-d8bc-425d-938b-8203997881e9.mov
-
+https://github.com/user-attachments/assets/c07b4854-4d95-4de3-a2aa-120a6ae214a0
 
 ## Script
 To run the app locally in the development mode, clone repository:\
