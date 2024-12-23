@@ -1,8 +1,7 @@
 # Simple Wordle Clone Game
 
 ## Overview
-This personal project is a customizable Wordle clone built using React. Unlike the traditional Wordle game, this version allows users to tailor their experience by selecting the word length and the number of tries before starting the game.
-[Play the game here](https://wordle-clone-jeroe-4952cdaa7484.herokuapp.com/)
+This personal project is a customizable Wordle clone built using React. Unlike the traditional Wordle game, this version allows users to tailor their experience by selecting the word length and the number of tries before starting the game. Play the [game](https://wordle-clone-jeroe-4952cdaa7484.herokuapp.com/) here!
 
 ## Features
 - Customizable Settings: Players can choose their preferred word length and the number of attempts before playing.
@@ -30,7 +29,7 @@ https://user-images.githubusercontent.com/56480078/180609437-a637a2ea-d8bc-425d-
 
 
 ## Script
-To run the app locally in the development mode, clone repository:
-`npm clean install`
-`npm start`
+To run the app locally in the development mode, clone repository:\
+`npm clean install`\
+`npm start`\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
